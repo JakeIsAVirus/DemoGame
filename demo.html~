@@ -7,7 +7,7 @@
 			canvas { border: 1px solid black; background: #FFDD66; }  
 		</style>  		
 	</head>
-	<body onload="game">
+	<body onload="game()">
 		<canvas id="background" width="600" height="400">
 			current stock price: $3.15 +0.15  
 		</canvas>
