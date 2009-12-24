@@ -67,14 +67,15 @@ var game = function(){
 			 currentTick,
 			 frameSpacing,
 			 seconds,
-			 currentTick = ( new Date()).getTime();
+			 currentTick;
 	 var tick = function(){
 			currentTick = ( new Date()).getTime();
 		 	frameSpacing = currentTick - lastTick;
 			lastTick = ( new Date()).getTime()};
 	 var getSeconds = function(){
 			seconds = frameSpacing / 1000;
-	 };
+			if( isNaN( seconds)){
+				 return 0;}};
 	 //display graphics
 	 drawBG( "first call");
 	 drawChar();
